@@ -93,6 +93,7 @@ module Security
       private
 
       def flags_for_options(options = {})
+        options[:a] ||= options.delete(:account)
         options[:s] ||= options.delete(:server)
         options[:p] ||= options.delete(:path)
         options[:P] ||= options.delete(:port)
